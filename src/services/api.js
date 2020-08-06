@@ -39,13 +39,18 @@ const postJournal = (data) => {
 //POST fetch message
 const postMessage = (data) => {
     const URL = "http://localhost:3000/api/v1/messages"
+    console.log(data)
     return fetch(URL, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
             Accept: 'application/json'
         },
-        body: JSON.stringify(data)
+        body: JSON.stringify({
+            content: data.content,
+            sender_user_id: data.sender_user_id,
+            receiver_user_id: data.receiver_user_id
+            })
     }).then(resp=>resp.json())
 }
 

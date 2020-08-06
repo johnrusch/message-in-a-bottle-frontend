@@ -13,6 +13,7 @@ class JournalEntry extends Component {
 
     //sends journal entry data to Journal.js editJournalEntry
     handleEditButton = () => {
+        console.log(this.props.journalEntryData)
         this.props.onEditJournalEntry(this.props.journalEntryData)
     }
     

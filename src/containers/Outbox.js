@@ -8,7 +8,8 @@ class Outbox extends Component {
     const userOutbox = this.props.messages.filter(message => {
       return message.sender_user_id === this.props.currentUser.id
     })
-    return userOutbox.map((message) => {
+    console.log(userOutbox)
+      return userOutbox.map((message) => {
       return (
         <Message
           key={message.id}

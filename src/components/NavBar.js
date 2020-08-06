@@ -9,12 +9,12 @@ class NavBar extends Component {
     const loggedIn = !!this.props.currentUser.id
     return (
       <div>
-        <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
-          <Link class="navbar-brand" to="/login">
+        <nav className="navbar navbar-expand-lg navbar-light navbar-custom">
+          <Link className="navbar-brand" to="/login">
             <img src={logo} alt="message in a bottle logo"/>
           </Link>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -22,24 +22,24 @@ class NavBar extends Component {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
 
-          {loggedIn ? (<div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <Link class="nav-link" to="/dashboard">
-                  Dashboard <span class="sr-only">(current)</span>
+          {loggedIn ? (<div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav mr-auto">
+              <li className="nav-item active">
+                <Link className="nav-link" to="/dashboard">
+                  Dashboard <span className="sr-only">(current)</span>
                 </Link>
               </li>
-              <li class="nav-item">
-                <Link class="nav-link" to="/dashboard/journal">
+              <li className="nav-item">
+                <Link className="nav-link" to="/dashboard/journal">
                   My Journal
                 </Link>
               </li>
-              <li class="nav-item dropdown">
+              <li className="nav-item dropdown">
                 <Link
-                  class="nav-link dropdown-toggle"
+                  className="nav-link dropdown-toggle"
                   to="/mailbox"
                   id="navbarDropdown"
                   role="button"
@@ -49,21 +49,21 @@ class NavBar extends Component {
                 >
                   My Messages
                 </Link>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <Link class="dropdown-item" to="/dashboard/mailbox/inbox">
+                <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <Link className="dropdown-item" to="/dashboard/mailbox/inbox">
                     Inbox
                   </Link>
-                  <Link class="dropdown-item" to="/dashboard/mailbox/outbox">
+                  <Link className="dropdown-item" to="/dashboard/mailbox/outbox">
                     Sent Messages
                   </Link>
-                  <div class="dropdown-divider"></div>
-                  <Link class="dropdown-item" to="/dashboard/mailbox/message-form">
+                  <div className="dropdown-divider"></div>
+                  <Link className="dropdown-item" to="/dashboard/mailbox/message-form">
                     New Message
                   </Link>
                 </div>
               </li>
             </ul>
-            <ul class="navbar-nav ml-auto">
+            <ul className="navbar-nav ml-auto">
               {/* {loggedIn ? (
                 <a className="item">Welcome {currentUser.username}</a>
               ) : null} */}

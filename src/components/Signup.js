@@ -40,7 +40,6 @@ class Signup extends React.Component {
     const { fields } = this.state;
     return (
       <div className="container mt-5">
-        {/* <Jumbotron /> */}
         <div class="card col-sm-6">
           {this.state.error ? <h1>Try Again</h1> : null}
           <div class="card-body">
